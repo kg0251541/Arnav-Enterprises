@@ -1,0 +1,315 @@
+/* 🌆 HERO SECTION with SLIDING BACKGROUND IMAGES */
+.hero {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  animation: slideShow 24s infinite;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(8, 12, 20, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  flex-direction: column;
+  z-index: 2;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.hero-content h1 span {
+  color: #f4b41a;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #e9ecef;
+  margin-bottom: 35px;
+}
+
+.hero-btn {
+  background: #f4b41a;
+  color: #102542;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: transform 0.3s, background 0.3s;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+.hero-btn:hover {
+  transform: scale(1.08);
+  background: #ffd166;
+}
+
+/* 🎞️ 4 SLIDING IMAGES ANIMATION */
+@keyframes slideShow {
+  0% {
+    background-image: url("https://media.istockphoto.com/id/2172317014/photo/happy-hispanic-man-working-on-laptop-at-home.jpg?s=612x612&w=0&k=20&c=9evc002hmjsuha6TiO8OftVTuZIE71Hr3qhmq8vRRH0=");
+  }
+  10% {
+    background-image: url("https://media.istockphoto.com/id/2172317014/photo/happy-hispanic-man-working-on-laptop-at-home.jpg?s=612x612&w=0&k=20&c=9evc002hmjsuha6TiO8OftVTuZIE71Hr3qhmq8vRRH0=");
+  }
+  20% {
+    background-image: url("https://media.istockphoto.com/id/2172317014/photo/happy-hispanic-man-working-on-laptop-at-home.jpg?s=612x612&w=0&k=20&c=9evc002hmjsuha6TiO8OftVTuZIE71Hr3qhmq8vRRH0=");
+  }
+  35% {
+    background-image: url("https://www.hdfcergo.com/images/default-source/cyber-insurance/online-banking-security.jpg");
+  }
+  100% {
+    background-image: url("https://www.der-bank-blog.de/wp-content/uploads/2014/07/online_banking_studien_und_research-1-1.jpg");
+  }
+}
+
+/* ABOUT SECTION */
+/* 🌟 Enhanced About Section */
+.about {
+  padding: 100px 8%;
+  background: #f8f9fa;
+  color: #102542;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 2.8rem;
+  color: #14213d;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.about h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #f4b41a;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -15px;
+  border-radius: 2px;
+}
+
+.about-content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.about-content img {
+  width: 45%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease;
+}
+.about-content img:hover {
+  transform: scale(1.05);
+}
+
+.about-content div {
+  flex: 1;
+  text-align: left;
+}
+.about-content p {
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 15px;
+}
+
+/* Extra Info Cards */
+.about-extra {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.about-box {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 25px 20px;
+  transition: transform 0.3s ease;
+}
+.about-box:hover {
+  transform: translateY(-6px);
+}
+.about-box h3 {
+  color: #f4b41a;
+  margin-bottom: 10px;
+}
+.about-box p {
+  color: #495057;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* Image Gallery */
+.about-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+.about-gallery img {
+  width: 30%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  transition: transform 0.4s ease;
+}
+.about-gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-content img {
+    width: 90%;
+  }
+  .about-gallery img {
+    width: 80%;
+  }
+}
+
+
+/* FEATURED PRODUCTS */
+.featured {
+  padding: 80px 10%;
+  background: #e9ecef;
+  text-align: center;
+}
+.featured h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #14213d;
+}
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+.feature-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-8px);
+}
+.feature-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+.feature-card h3 {
+  color: #102542;
+  margin: 15px 0 10px;
+}
+.feature-card p {
+  padding: 0 15px 25px;
+  font-size: 0.95rem;
+  color: #495057;
+}
+
+/* WHY CHOOSE US */
+.why {
+  padding: 80px 10%;
+  background: #f8f9fa;
+  text-align: center;
+}
+.why h2 {
+  font-size: 2.4rem;
+  margin-bottom: 40px;
+  color: #14213d;
+}
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.why-card {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.why-card:hover {
+  transform: translateY(-8px);
+}
+.why-card h3 {
+  color: #f4b41a;
+  margin-bottom: 10px;
+}
+.why-card p {
+  color: #495057;
+}
+
+/* CTA SECTION */
+.cta {
+  background: #14213d;
+  color: white;
+  text-align: center;
+  padding: 70px 10%;
+}
+.cta h2 {
+  font-size: 2.3rem;
+  margin-bottom: 20px;
+}
+.cta p {
+  font-size: 1.1rem;
+  margin-bottom: 25px;
+}
+.cta-btn {
+  background: #f4b41a;
+  color: #102542;
+  padding: 14px 28px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: transform 0.3s, background 0.3s;
+  display: inline-block;
+}
+.cta-btn:hover {
+  transform: scale(1.08);
+  background: #ffd166;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-content img {
+    width: 90%;
+  }
+}
