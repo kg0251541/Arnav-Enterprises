@@ -18,17 +18,17 @@ export default function AdminPanel() {
   }, []);
 
   const fetchProducts = async () => {
-    const res = await axios.get("http://localhost:5000/api/products");
+    const res = await axios.get("https://bakend-p4gh.onrender.com/api/products");
     setProducts(res.data);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (editing) {
-      await axios.put(`http://localhost:5000/api/products/${editing}`, formData);
+      await axios.put(`https://bakend-p4gh.onrender.com/api/products/${editing}`, formData);
       setEditing(null);
     } else {
-      await axios.post("http://localhost:5000/api/products", formData);
+      await axios.post("https://bakend-p4gh.onrender.com/products", formData);
     }
     setFormData({ name: "", price: "", description: "", image: "" });
     fetchProducts();
@@ -36,7 +36,7 @@ export default function AdminPanel() {
 
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this product?")) {
-      await axios.delete(`http://localhost:5000/api/products/${id}`);
+      await axios.delete(`https://bakend-p4gh.onrender.com/products/${id}`);
       fetchProducts();
     }
   };
