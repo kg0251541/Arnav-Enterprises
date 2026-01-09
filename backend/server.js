@@ -25,7 +25,7 @@ app.get("/", (req, res) => {
 });
 
 // ❌ Remove app.listen() — Vercel doesn't use this
-// app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+ app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
 
 // ✅ Export the app for Vercel serverless function
 export default app;
